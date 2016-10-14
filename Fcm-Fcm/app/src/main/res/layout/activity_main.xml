@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/main_header_selector"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:paddingTop="5dp"
+        android:layout_height="126dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal"
+            android:maxHeight="50dp"
+            android:maxWidth="50dp"
+            android:src="@drawable/ptilogo"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/textView"
+            android:layout_alignParentTop="true" />
+    </LinearLayout>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="0dp"
+        tools:context="com.example.mahmud.digitedu.MainActivity">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="#fce4ec"
+            android:textSize="25dp"
+            android:text="Welcome to the Official Online Notice Board of PTI Giabandha!"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="#9fa8da"
+            android:padding="3dp"
+            android:text="Show Messages" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

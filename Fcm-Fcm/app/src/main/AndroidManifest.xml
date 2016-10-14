@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mahmud.digitedu">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ptilogo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.mahmud.digitedu.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ResultActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/ListActivityTheme"
+            />
+
+        <service
+            android:name="com.example.mahmud.digitedu.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+
+        <service
+            android:name="com.example.mahmud.digitedu.FirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <!--<provider-->
+            <!--android:name=".LanguageContentProvider"-->
+            <!--android:authorities="com.example.mahmud.digitedu.provider.LanguageContentProvider"-->
+            <!--android:exported="false" />-->
+
+
+    </application>
+
+</manifest>

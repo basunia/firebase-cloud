@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:elevation="10dp"
+    android:background="@drawable/layout_rounded"
+    android:padding="5dp" >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:textColor="#bf4080"
+        android:textStyle="normal"
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/stamp" />
+
+    <TextView
+        android:id="@+id/list_item"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:text="Messages"
+        android:textSize="17dp"
+         />
+
+</LinearLayout>
