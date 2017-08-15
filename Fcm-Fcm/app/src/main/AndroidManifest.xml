@@ -16,14 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ResultActivity"
+        <activity android:name=".activities.ResultActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/ListActivityTheme"
             />
 
         <service
-            android:name="com.example.mahmud.digitedu.FirebaseMessagingService">
+            android:name="com.example.mahmud.digitedu.services.FirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
@@ -31,7 +31,7 @@
 
 
         <service
-            android:name="com.example.mahmud.digitedu.FirebaseInstanceIDService">
+            android:name="com.example.mahmud.digitedu.services.FirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>

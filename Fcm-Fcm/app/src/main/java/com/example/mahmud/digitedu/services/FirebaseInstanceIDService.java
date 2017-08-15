@@ -1,4 +1,4 @@
-package com.example.mahmud.digitedu;
+package com.example.mahmud.digitedu.services;
 
 import android.util.Log;
 import android.widget.Toast;
@@ -50,7 +50,7 @@ public class FirebaseInstanceIDService extends FirebaseInstanceIdService {
                 .build();
 
         Request request = new Request.Builder()
-                .url("ENTER YOUR SERVER URL HERE")
+                .url("http://pti.mahmud.vubon.com/register.php")
                 .post(body)
                 .build();
 

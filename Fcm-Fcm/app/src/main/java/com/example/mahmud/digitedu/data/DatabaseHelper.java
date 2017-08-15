@@ -1,4 +1,4 @@
-package com.example.mahmud.digitedu;
+package com.example.mahmud.digitedu.data;
 
 import android.content.ContentValues;
 import android.content.Context;

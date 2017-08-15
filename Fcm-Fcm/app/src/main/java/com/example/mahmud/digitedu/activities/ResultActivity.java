@@ -1,7 +1,6 @@
-package com.example.mahmud.digitedu;
+package com.example.mahmud.digitedu.activities;
 
 import android.app.ListActivity;
-import android.content.DialogInterface;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -11,8 +10,11 @@ import android.support.annotation.Nullable;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Adapter;
 import android.widget.SimpleCursorAdapter;
+
+import com.example.mahmud.digitedu.utils.DatabaseConstants;
+import com.example.mahmud.digitedu.data.DatabaseHelper;
+import com.example.mahmud.digitedu.R;
 
 /**
  * Created by mahmud on 9/4/16.

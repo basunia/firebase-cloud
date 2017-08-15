@@ -1,4 +1,4 @@
-package com.example.mahmud.digitedu;
+package com.example.mahmud.digitedu.services;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -7,22 +7,36 @@ import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
-import android.widget.Toast;
+import android.text.Html;
+import android.util.Log;
 
+import com.example.mahmud.digitedu.data.DatabaseHelper;
+import com.example.mahmud.digitedu.R;
+import com.example.mahmud.digitedu.activities.ResultActivity;
 import com.google.firebase.messaging.RemoteMessage;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.nio.charset.Charset;
 
 
 public class FirebaseMessagingService extends com.google.firebase.messaging.FirebaseMessagingService{
 
+    private String TAG = FirebaseMessagingService.class.getSimpleName();
     Ringtone r;
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
 
         String message = remoteMessage.getData().get("message").toString().trim();
+        Log.d(TAG, message);
+        //Charset.forName("UTF-8").encode(message);
+        String result = Html.fromHtml(message).toString();
 
-        storeInDB(message);
-        showNotification(message);
+
+        Log.d(TAG, result);
+        storeInDB(result);
+        showNotification(result);
     }
 
     private void storeInDB(String message) {
