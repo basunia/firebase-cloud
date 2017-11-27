@@ -2,18 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/stylist_resultactivity"
     android:orientation="vertical"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    >
+    android:paddingLeft="2dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:paddingRight="2dp">
 
     <ListView
         android:id="@android:id/android:list"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:divider="@android:color/transparent"
-        android:dividerHeight="20.0sp" />
+        android:dividerHeight="10.0sp" />
 </LinearLayout>
 
 

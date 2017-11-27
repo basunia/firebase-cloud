@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    android:elevation="10dp"
+    android:elevation="3dp"
     android:background="@drawable/layout_rounded"
     android:padding="5dp" >
 
@@ -14,9 +14,9 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
-        android:textColor="#bf4080"
+        android:textColor="#9C27B0"
         android:textStyle="normal"
-        android:fontFamily="sans-serif-condensed"
+        android:typeface="serif"
         android:id="@+id/stamp" />
 
     <TextView

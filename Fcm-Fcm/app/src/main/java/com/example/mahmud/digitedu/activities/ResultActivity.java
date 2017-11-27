@@ -7,11 +7,17 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import android.support.annotation.Nullable;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.AppCompatCallback;
+import android.support.v7.app.AppCompatDelegate;
+import android.support.v7.view.ActionMode;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.SimpleCursorAdapter;
 
+import com.example.mahmud.digitedu.MainActivity;
 import com.example.mahmud.digitedu.utils.DatabaseConstants;
 import com.example.mahmud.digitedu.data.DatabaseHelper;
 import com.example.mahmud.digitedu.R;
@@ -26,10 +32,36 @@ public class ResultActivity extends ListActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_result);
+        AppCompatCallback callback = new AppCompatCallback() {
+            @Override
+            public void onSupportActionModeStarted(ActionMode actionMode) {
+            }
 
-        if( getActionBar() != null){
-            getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#e91e63")));
+            @Override
+            public void onSupportActionModeFinished(ActionMode actionMode) {
+            }
+
+            @Nullable
+            @Override
+            public ActionMode onWindowStartingSupportActionMode(ActionMode.Callback callback) {
+                return null;
+            }
+        };
+
+        AppCompatDelegate delegate = AppCompatDelegate.create(this, callback);
+        delegate.onCreate(savedInstanceState);
+
+        delegate.setContentView(R.layout.result_parent);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        delegate.setSupportActionBar(toolbar);
+        try {
+            delegate.getSupportActionBar().setDisplayShowHomeEnabled(true);
+            //getSupportActionBar().setIcon(R.drawable.icon2);
+            delegate.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        } catch (NullPointerException e) {
+            e.printStackTrace();
         }
 
 //        TextView tv = (TextView) findViewById(R.id.message);
@@ -68,6 +100,9 @@ public class ResultActivity extends ListActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.back:
+                finish();
+                break;
+            case android.R.id.home:
                 finish();
                 break;
             default:

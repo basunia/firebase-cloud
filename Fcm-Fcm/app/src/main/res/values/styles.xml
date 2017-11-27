@@ -8,10 +8,20 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="ListActivityTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <style name="ListActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary_re</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_re</item>
+        <item name="colorAccent">@color/colorAccent_re</item>
+    </style>
+
+    <style name="ListActivityTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
     <!--<item name="android:displayOptions">showHome|homeAsUp|showTitle</item>-->
     <!--<item name="displayOptions">showHome|homeAsUp|showTitle</item>-->
     <!--<item name="android:icon">@android:color/transparent</item>-->
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
 </resources>
